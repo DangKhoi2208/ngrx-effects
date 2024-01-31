@@ -1,14 +1,14 @@
-<app-mycounter></app-mycounter>
-<app-counter></app-counter>
+<!--@for (item of genList; track item) {-->
+<!--  <button (click)="getPokeList(item.value)">get</button>-->
+<!--}-->
+<div class="container">
+  @for (item of list; track item) {
 
-@if (loading$|async) {
-  <div class="loading">Loading...</div>
-} @else {
-  @if (error$|async) {
-    <div class="loaded">{{ error$ |async }}</div>
-  } @else {
-    @for (item of articles$| async; track item.title) {
-      <div class="loaded">{{ item.title }}</div>
-    }
+    <div class="btn">
+      <button>{{ item.name }}</button>
+    </div>
+
+
   }
-}
+</div>
+

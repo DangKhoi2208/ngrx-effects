@@ -1,5 +1,7 @@
+import { PokeList } from '../models/poke.model';
+
 export interface PokeStates {
-  pokemons: PokeStates[];
+  list: PokeList[];
   loading: boolean;
   error: string;
 }
